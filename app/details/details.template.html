@@ -3,16 +3,25 @@
     <h4 class="detailed__header">Details</h4>
     <div class="detailed__content">
       <div class="detailed__content-header">
-        <h4> <!-- Title Here --> </h4>
-        <span> <!-- Price Here --> </span>
+        <h4>
+          <!-- Title Here -->
+          {{detailsCtrl.item.title}}
+        </h4>
+        <span> <!-- Price Here -->
+        {{detailsCtrl.item.price}}
+        </span>
       </div>
 
       <div class="detailed__content-middle">
-        <span><!-- Size Here -->, <!-- Color Here --></span>
+        <span><!-- Size Here -->
+          {{detailsCtrl.item.size}}
+          , <!-- Color Here -->
+        {{detailsCtrl.item.color}}
+        </span>
       </div>
 
       <div class="detailed__content-footer">
-        <button ng-click="">add to cart</button>
+        <button ng-click="detailsCtrl.addToCart(detailsCtrl.item)">add to cart</button>
       </div>
     </div>
   </div>
